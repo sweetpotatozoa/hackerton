@@ -1,0 +1,16 @@
+.container {
+    width: 1000px;
+    height: 650px;
+    margin: 0 auto;
+    border: 1px solid #ccc; /* Optional: For visual debugging */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    font-family: 'DNF Forged Blade', sans-serif;
+}
+
+.img {
+    width: 1000px;
+    height: 650px;
+}
