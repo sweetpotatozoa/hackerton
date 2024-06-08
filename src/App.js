@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { Routes, Route, useNavigate } from 'react-router-dom';
 import InitialScreen from './pages/InitialScreen';
 import NameSelection from './pages/NameSelection';
@@ -72,7 +72,7 @@ const gameContent = {
     3: {
         chapter: { num: '#3', title: 'NEXT 경짜 @ 경영 잔디', date: '4월 1일 월요일', url: '/images/chapter3.png' },
         picture: { url: '/images/pic3.png' },
-        context: 'NEXT랑 중짜다! 다들 교복은 입었으려나? ㅎㅎ ',
+        context: 'NEXT랑 만우절 저녁! 다들 교복은 입었으려나? ㅎㅎ ',
         npc: { url: '/images/npc3.png' },
         choice: {
             question:
@@ -94,7 +94,7 @@ const gameContent = {
         chapter: {
             num: '#4',
             title: 'NEXT 개발세션 @ 스타트업스테이션',
-            date: '3월 30일 일요일',
+            date: '4월 29일 월요일',
             url: '/images/chapter4.png',
         },
         picture: { url: '/images/pic4.png' },
@@ -116,7 +116,7 @@ const gameContent = {
         },
     },
     5: {
-        chapter: { num: '#5', title: 'NEXT 돈굴돈굴 @ 카페파인', date: '3월 30일 일요일', url: '/images/chapter5.png' },
+        chapter: { num: '#5', title: 'NEXT 돈굴돈굴 @ 카페파인', date: '5월 12일 수요일', url: '/images/chapter5.png' },
         picture: { url: '/images/pic5.png' },
         context: '10만원으로 1000만원 만들어야지!!',
         npc: { url: '/images/npc5.png' },
@@ -142,7 +142,7 @@ const gameContent = {
         chapter: {
             num: '#6',
             title: 'NEXT 입실렌티 @ 녹지운동장',
-            date: '3월 30일 일요일',
+            date: '5월 27일 토요일',
             url: '/images/chapter6.png',
         },
         picture: { url: '/images/pic6.png' },
@@ -164,7 +164,7 @@ const gameContent = {
         },
     },
     7: {
-        chapter: { num: '#7', title: 'NEXT 종강총회 @ 중앙광장', date: '3월 30일 일요일', url: '/images/chapter7.png' },
+        chapter: { num: '#7', title: 'NEXT 종강총회 @ 중앙광장', date: '6월 6일 목요일', url: '/images/chapter7.png' },
         picture: { url: '/images/pic7.png' },
         context: '벌써 NEXT 사람들이랑 알게 된 지 1학기가 지났다니..!',
         npc: { url: '/images/npc7.png' },
@@ -188,7 +188,7 @@ const gameContent = {
         chapter: {
             num: '#8',
             title: '무박 해커톤 @ 코드잇',
-            date: '6월 8,9일 토,일요일',
+            date: '6월 8-9일 토-일요일',
             url: '/images/chapter8.png',
         },
         picture: { url: '/images/pic8.png' },
@@ -221,7 +221,7 @@ const App = () => {
 
     const startGame = () => {
         navigate('/nameSelection');
-        new Audio('/audios/princess_maker.mp3').play();
+        new Audio('/audios/princess_maker.m4a').play();
     };
 
     const selectName = (enteredName) => {
