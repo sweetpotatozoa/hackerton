@@ -1,0 +1,25 @@
+.next-button-screen {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 1000px;
+    height: 650px;
+    background-color: black;
+    color: white;
+}
+
+.next-button {
+    background-color: orange;
+    color: white;
+    border: none;
+    padding: 20px 40px;
+    font-size: 24px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-family: "DNFForgedBlade", sans-serif;
+    font-weight: 500;
+}
+
+.next-button:hover {
+    background-color: darkorange;
+}

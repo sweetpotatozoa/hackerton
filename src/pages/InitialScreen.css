@@ -1,0 +1,43 @@
+@font-face {
+    font-family: "DNFForgedBlade-Medium";
+    src: url("../../public/fonts/DNFForgedBlade-Medium.ttf") format("truetype");
+}
+
+.initial-screen {
+    width: 1000px;
+    height: 650px;
+    background-color: black;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    position: relative;
+}
+
+.content {
+    text-align: center;
+}
+
+.start-button,
+.explanation-button {
+    background-color: #ff9900;
+    color: black;
+    border: none;
+    border-radius: 30px;
+    padding: 10px 40px;
+    font-size: 34px;
+    font-weight: bold;
+    margin: 0 10px;
+    cursor: pointer;
+    outline: none;
+    transition: transform 0.2s;
+    font-family: "DNFForgedBlade-Medium", sans-serif;
+}
+
+.start-button:hover,
+.explanation-button:hover {
+    transform: scale(1.1);
+}
