@@ -404,13 +404,13 @@ const Choice = (props) => {
                 </div>
                 <div className={styles.options}>
                     <div className={styles.option} onClick={nextHandler} data-value="1">
-                        <p>{gameContent.choice.answer1}</p>
+                        {gameContent.choice.answer1}
                     </div>
                     <div className={styles.option} onClick={nextHandler} data-value="2">
-                        <p>{gameContent.choice.answer2}</p>
+                        {gameContent.choice.answer2}
                     </div>
                     <div className={styles.option} onClick={nextHandler} data-value="3">
-                        <p>{gameContent.choice.answer3}</p>
+                        {gameContent.choice.answer3}
                     </div>
                 </div>
             </div>
