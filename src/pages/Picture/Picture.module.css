@@ -1,0 +1,7 @@
+.background {
+    width: 1000px;
+    height: 650px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
