@@ -1,20 +1,18 @@
-import React, { useState } from "react";
-import backgroundImage from "../assets/images/image.png";
-import "./NameSelection.css";
+import React, { useState } from 'react';
+import backgroundImage from '../assets/images/image.png';
+import './NameSelection.css';
+import { useNavigate } from 'react-router-dom';
 
-const NameSelection = ({ selectName }) => {
-    const [name, setName] = useState("");
+const NameSelection = ({ gameData, setGameData }) => {
+    const navigate = useNavigate();
 
     const handleNameChange = (e) => {
-        setName(e.target.value);
+        setGameData({ ...gameData, name: e.target.value });
     };
 
-    const handleSubmit = () => {
-        if (name.trim() !== "") {
-            selectName(name);
-        } else {
-            alert("이름을 입력해주세요.");
-        }
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        navigate('/genderSelection');
     };
 
     return (
@@ -27,7 +25,7 @@ const NameSelection = ({ selectName }) => {
                 <div className="input-wrapper">
                     <input
                         type="text"
-                        value={name}
+                        value={gameData.name}
                         onChange={handleNameChange}
                         className="name-input"
                         placeholder="이름을 입력하세요"

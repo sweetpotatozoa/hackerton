@@ -1,6 +1,5 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Routes, Route, useNavigate } from 'react-router-dom';
-import Home from './pages/Home/Home';
 import InitialScreen from './pages/InitialScreen';
 import NameSelection from './pages/NameSelection';
 import GenderSelection from './pages/GenderSelection';
@@ -233,7 +232,6 @@ const App = () => {
     const selectGender = (selectedGender) => {
         setGender(selectedGender);
         new Audio(`/audios/${selectedGender}_letsgo.m4a`).play();
-        navigate('/animation1');
     };
 
     const endGame = () => {
@@ -248,6 +246,27 @@ const App = () => {
         localStorage.clear();
     };
 
+    const initialUserState = {
+        name: '',
+        gender: '',
+        affinity: {
+            character1: 50,
+            character2: 50,
+            character3: 50,
+            character4: 50,
+        },
+        currentChapter: 1,
+    };
+
+    const [gameData, setGameData] = useState(() => {
+        const savedData = localStorage.getItem('gameData');
+        return savedData ? JSON.parse(savedData) : initialUserState;
+    });
+
+    useEffect(() => {
+        localStorage.setItem('gameData', JSON.stringify(gameData));
+    }, [gameData]);
+
     return (
         <div style={{ width: '1000px', height: '650px' }}>
             <Routes>
@@ -256,8 +275,16 @@ const App = () => {
                 <Route path="/ending3" element={<Ending3 />} />
                 <Route path="/ending4" element={<Ending4 />} />
                 <Route path="/" element={<InitialScreen startGame={startGame} />} />
-                <Route path="/nameSelection" element={<NameSelection selectName={selectName} />} />
-                <Route path="/genderSelection" element={<GenderSelection selectGender={selectGender} />} />
+                <Route
+                    path="/nameSelection"
+                    element={<NameSelection gameData={gameData} setGameData={setGameData} />}
+                />
+                <Route
+                    path="/genderSelection"
+                    element={
+                        <GenderSelection gameData={gameData} setGameData={setGameData} selectGender={selectGender} />
+                    }
+                />
                 <Route path="/animation1" element={<Animation1 />} />
                 <Route path="/animation2" element={<Animation2 />} />
                 <Route path="/animation3" element={<Animation3 />} />
@@ -283,7 +310,15 @@ const App = () => {
                 />
                 <Route
                     path="/chapter/:chapterId/choice"
-                    element={<Choice chapter={chapter} setChapter={setChapter} gameContent={gameContent[chapter]} />}
+                    element={
+                        <Choice
+                            chapter={chapter}
+                            setChapter={setChapter}
+                            gameContent={gameContent[chapter]}
+                            gameData={gameData}
+                            setGameData={setGameData}
+                        />
+                    }
                 />
                 <Route
                     path="/chapter/:chapterId/change"
