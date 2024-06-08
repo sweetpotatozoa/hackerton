@@ -1,0 +1,8 @@
+.background {
+    background-image: url(/Users/kim-sangwoo/workspace/hackerton/nextsome/public/images/station.png);
+    width: 1000px;
+    height: 650px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
