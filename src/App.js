@@ -7,6 +7,7 @@ import Picture from './pages/Picture/Picture';
 import Context from './pages/Context/Context';
 import Change from './pages/Change/Change';
 import { useState } from 'react';
+import Ending1 from './pages/Ending1/Ending1';
 
 const gameContent = {
     1: {
@@ -199,7 +200,7 @@ const gameContent = {
 };
 
 function App() {
-    const [chapter, setChapter] = useState(2);
+    const [chapter, setChapter] = useState(7);
 
     return (
         <>
@@ -229,6 +230,7 @@ function App() {
                     path="/chapter/:chapterId/change"
                     element={<Change chapter={chapter} setChapter={setChapter} gameContent={gameContent[chapter]} />}
                 />
+                <Route path="/Ending1" element={<Ending1 />} />
             </Routes>
         </>
     );

@@ -4,7 +4,6 @@
     display: flex;
     flex-direction: column;
     position: relative;
-    z-index: -1;
 }
 
 .blurImage {
@@ -17,27 +16,29 @@
     background-position: center;
     filter: blur(10px);
     z-index: 1; /* 배경 블러를 가장 아래에 위치시킴 */
+    cursor: pointer; /* 클릭 가능한 영역임을 나타냄 */
 }
 
 .faces {
     position: relative;
-    z-index: 5; /* 배경 블러 위에 위치시킴 */
+    z-index: 2; /* 배경 블러 위에 위치시킴 */
     color: white; /* 예제용 텍스트 색상 */
 }
+
 .title {
     font-size: 20px;
     font-weight: bold;
     margin-left: 20px;
-    z-index: 5;
     text-align: center;
     color: white;
+    z-index: 2; /* 배경 블러 위에 위치시킴 */
 }
 
 .bar {
     width: 400px;
     background-color: hotpink;
-    z-index: 5;
     height: 10px;
+    z-index: 2; /* 배경 블러 위에 위치시킴 */
 }
 
 .face {
@@ -45,5 +46,5 @@
     flex-direction: row;
     align-items: center;
     margin-top: 20px;
-    z-index: 5;
+    z-index: 2; /* 배경 블러 위에 위치시킴 */
 }
