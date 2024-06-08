@@ -6,6 +6,7 @@ function Ending1() {
     const navigate = useNavigate();
     const { chapterId } = useParams();
     const handleClick = () => {
+        new Audio('/audios/iphonenoti.m4a').play();
         // 클릭 시 다음 페이지로 이동
         navigate(`/ending2`);
     };
