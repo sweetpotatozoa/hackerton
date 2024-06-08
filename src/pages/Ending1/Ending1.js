@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-const Ending1 = (props) => {
-    return <div>끝!</div>;
-};
-=======
 import React from 'react';
 import styles from './Ending1.module.css';
 import { useParams, useNavigate } from 'react-router-dom';
@@ -23,6 +18,5 @@ function Ending1() {
         </div>
     );
 }
->>>>>>> 7a12e6f9eba3cc47276d789c2c2d9d64d9d91342
 
 export default Ending1;

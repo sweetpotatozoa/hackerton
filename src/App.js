@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Routes, Route, useNavigate } from 'react-router-dom';
+import Home from './pages/Home/Home';
 import InitialScreen from './pages/InitialScreen';
 import NameSelection from './pages/NameSelection';
 import GenderSelection from './pages/GenderSelection';
@@ -17,6 +18,9 @@ import Picture from './pages/Picture/Picture';
 import Context from './pages/Context/Context';
 import Change from './pages/Change/Change';
 import Ending1 from './pages/Ending1/Ending1';
+import Ending2 from './pages/Ending2/Ending2';
+import Ending3 from './pages/Ending3/Ending3';
+import Ending4 from './pages/Ending4/Ending4';
 import './App.css';
 
 const gameContent = {
@@ -247,7 +251,6 @@ const App = () => {
     return (
         <div style={{ width: '1000px', height: '650px' }}>
             <Routes>
-                <Route path="/" element={<Home />} />
                 <Route path="/ending1" element={<Ending1 />} />
                 <Route path="/ending2" element={<Ending2 />} />
                 <Route path="/ending3" element={<Ending3 />} />
