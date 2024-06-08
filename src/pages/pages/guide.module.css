@@ -1,0 +1,82 @@
+@font-face {
+  font-family: 'DNFForgedBlade-Bold';
+  src: url('../../font//DNFForgedBlade-Bold.otf') format('opentype');
+}
+
+.container {
+    width: 1000px;
+    height: 650px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    background-color: black;
+    color: white;
+  }
+  
+  .topSection {
+    height: 150px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 50px;
+    font-family: 'DNFForgedBlade-Bold', sans-serif
+  }
+  
+  .logo {
+    font-size: 24px;
+    font-weight: bold;
+    margin-left: 20px;
+  }
+
+  .logoImage {
+    width: 100px;
+    height: auto;
+  }
+  
+  .title {
+    font-size: 30px;
+    font-weight: bold;
+    margin-right: 20px;
+  }
+  
+  .middleSection {
+    height: 300px;
+    display: flex;
+  }
+  
+  .leftImage, .rightImage {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    height: auto;
+  }
+  
+  .bottomSection {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px;
+    height: 100px;
+    text-decoration: none;
+  }
+  
+  .description {
+    width: 635px;
+    font-size: 16px;
+    line-height: 1.5;
+  }
+  
+  .closeButton {
+    background-color: yellow;
+    border: none;
+    padding: 10px 20px;
+    font-size: 32px;
+    text-decoration: none;
+    color: black;
+    cursor: pointer;
+    font-family: 'DNFForgedBlade-Bold', sans-serif;
+  }
+
+  
