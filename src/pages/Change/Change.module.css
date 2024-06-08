@@ -1,8 +1,49 @@
 .background {
-    background-image: url(/Users/kim-sangwoo/workspace/hackerton/nextsome/public/images/station.png);
     width: 1000px;
     height: 650px;
     display: flex;
     flex-direction: column;
     position: relative;
+    z-index: -1;
+}
+
+.blurImage {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    filter: blur(10px);
+    z-index: 1; /* 배경 블러를 가장 아래에 위치시킴 */
+}
+
+.faces {
+    position: relative;
+    z-index: 5; /* 배경 블러 위에 위치시킴 */
+    color: white; /* 예제용 텍스트 색상 */
+}
+.title {
+    font-size: 20px;
+    font-weight: bold;
+    margin-left: 20px;
+    z-index: 5;
+    text-align: center;
+    color: white;
+}
+
+.bar {
+    width: 400px;
+    background-color: hotpink;
+    z-index: 5;
+    height: 10px;
+}
+
+.face {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 20px;
+    z-index: 5;
 }

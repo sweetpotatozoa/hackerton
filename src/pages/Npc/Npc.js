@@ -9,8 +9,8 @@ const Npc = (props) => {
         navigate(`/chapter/${chapterId}/choice`);
     };
 
-    const imgChanger = { backgroundImage: `url(${gameContent.npc.imgUrl})` };
-    return <div className={styles.background} onClick={nextHandler}></div>;
+    const imgChanger = { backgroundImage: `url(${gameContent.npc.url})` };
+    return <div className={styles.background} onClick={nextHandler} style={imgChanger}></div>;
 };
 
 export default Npc;
