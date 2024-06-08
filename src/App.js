@@ -200,7 +200,7 @@ const gameContent = {
 };
 
 function App() {
-    const [chapter, setChapter] = useState(7);
+    const [chapter, setChapter] = useState(1);
 
     return (
         <>
