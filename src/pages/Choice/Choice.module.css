@@ -1,5 +1,4 @@
 .background {
-    background-image: url(/Users/kim-sangwoo/workspace/hackerton/nextsome/public/images/station.png);
     width: 1000px;
     height: 650px;
     display: flex;
@@ -18,12 +17,6 @@
     z-index: 1;
 }
 
-.scene {
-    padding: 50px;
-    color: white;
-    z-index: 2;
-}
-
 .answer {
     display: flex;
     justify-content: center;
@@ -37,6 +30,11 @@
     margin-top: 50px;
     color: white;
     z-index: 2;
+    padding-top: 100px;
+}
+
+.question {
+    width: 70%;
 }
 
 .options {
