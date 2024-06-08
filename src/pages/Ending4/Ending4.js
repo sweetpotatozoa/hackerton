@@ -49,7 +49,7 @@ function Ending4() {
         // LocalStorage 초기화
         localStorage.clear();
         // 홈으로 이동
-        navigate(`/Home`);
+        navigate(`/`);
     };
 
     return (

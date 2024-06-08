@@ -1,3 +1,5 @@
+/* Ending4.module.css */
+
 .container {
     width: 1000px;
     height: 650px;
@@ -10,7 +12,7 @@
 
 .logo {
     height: 120px;
-    top: 40px;
+    top: 350px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -35,7 +37,7 @@
     font-family: 'DNFForgedBlade-Bold', sans-serif;
     z-index: 2; /* 배경 이미지는 제일 아래로 */
     position: absolute; /* 절대 위치 지정 */
-    top: 200px;
+    top: 500px;
     left: 700px;
 }
 
@@ -70,5 +72,5 @@
     z-index: 2; /* 배경 이미지는 제일 아래로 */
     position: absolute; /* 절대 위치 지정 */
     left: 960px;
-    top: 500px;
+    top: 700px;
 }
