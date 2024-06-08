@@ -10,10 +10,7 @@
     font-family: 'DNF Forged Blade', sans-serif;
 }
 
-.title {
-    position: relative;
-    top: 170px;
-    font-size: 25px;
-    color: white;
-    font-weight: lighter;
+.img {
+    width: 1000px;
+    height: 650px;
 }
