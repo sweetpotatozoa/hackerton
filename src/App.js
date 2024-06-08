@@ -270,10 +270,10 @@ const App = () => {
     return (
         <div style={{ width: '1000px', height: '650px' }}>
             <Routes>
-                <Route path="/ending1" element={<Ending1 />} />
-                <Route path="/ending2" element={<Ending2 />} />
-                <Route path="/ending3" element={<Ending3 />} />
-                <Route path="/ending4" element={<Ending4 />} />
+                <Route path="/ending1" element={<Ending1 gameData={gameData} />} />
+                <Route path="/ending2" element={<Ending2 gameData={gameData} />} />
+                <Route path="/ending3" element={<Ending3 gameData={gameData} />} />
+                <Route path="/ending4" element={<Ending4 gameData={gameData} setGameData={setGameData} />} />
                 <Route path="/" element={<InitialScreen startGame={startGame} />} />
                 <Route
                     path="/nameSelection"
@@ -322,9 +322,15 @@ const App = () => {
                 />
                 <Route
                     path="/chapter/:chapterId/change"
-                    element={<Change chapter={chapter} setChapter={setChapter} gameContent={gameContent[chapter]} />}
+                    element={
+                        <Change
+                            chapter={chapter}
+                            setChapter={setChapter}
+                            gameContent={gameContent[chapter]}
+                            gameData={gameData}
+                        />
+                    }
                 />
-                <Route path="/Ending1" element={<Ending1 />} />
             </Routes>
         </div>
     );

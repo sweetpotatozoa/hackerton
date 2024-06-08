@@ -2,7 +2,7 @@ import styles from './Change.module.css';
 import { useParams, useNavigate } from 'react-router-dom';
 
 const Change = (props) => {
-    const { chapter, setChapter, gameContent } = props;
+    const { chapter, setChapter, gameContent, gameData } = props;
     const { chapterId } = useParams();
     const navigate = useNavigate();
 
@@ -17,6 +17,7 @@ const Change = (props) => {
     };
 
     const imgChanger = { backgroundImage: `url(${gameContent.change.url})` };
+    console.log('gameData.affinity', gameData.affinity.character1);
 
     return (
         <div className={styles.background} onClick={nextHandler}>
@@ -25,25 +26,25 @@ const Change = (props) => {
                 <div className={styles.face}>
                     <img src={'/images/face1.png'} alt="change" />
                     <div className={styles.gauge}>
-                        <div className={styles.fill} style={{ width: '50%' }}></div>
+                        <div className={styles.fill} style={{ width: `${gameData.affinity.character1}%` }}></div>
                     </div>
                 </div>
                 <div className={styles.face}>
                     <img src={'/images/face2.png'} alt="change" />
                     <div className={styles.gauge}>
-                        <div className={styles.fill} style={{ width: '50%' }}></div>
+                        <div className={styles.fill} style={{ width: `${gameData.affinity.character2}%` }}></div>
                     </div>
                 </div>
                 <div className={styles.face}>
                     <img src={'/images/face3.png'} alt="change" />
                     <div className={styles.gauge}>
-                        <div className={styles.fill} style={{ width: '50%' }}></div>
+                        <div className={styles.fill} style={{ width: `${gameData.affinity.character3}%` }}></div>
                     </div>
                 </div>
                 <div className={styles.face}>
                     <img src={'/images/face4.png'} alt="change" />
                     <div className={styles.gauge}>
-                        <div className={styles.fill} style={{ width: '50%' }}></div>
+                        <div className={styles.fill} style={{ width: `${gameData.affinity.character4}%` }}></div>
                     </div>
                 </div>
             </div>

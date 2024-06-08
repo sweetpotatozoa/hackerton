@@ -10,7 +10,11 @@ const GenderSelection = ({ gameData, setGameData, selectGender }) => {
     const [selectedGender, setSelectedGender] = useState(null);
 
     const handleGenderClick = (gender) => {
-        setGameData({ ...gameData, gender: gender });
+        setGameData({
+            ...gameData,
+            gender: gender,
+            affinity: { character1: 50, character2: 50, character3: 50, character4: 50 },
+        });
         setSelectedGender(gender);
         new Audio(`/audios/${gender}_letsgo.m4a`).play();
     };
