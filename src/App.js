@@ -9,6 +9,10 @@ import Animation3 from "./pages/Animation3";
 import Animation4 from "./pages/Animation4";
 import NextButtonScreen from "./pages/NextButtonScreen";
 import ResultScreen from "./pages/ResultScreen";
+<<<<<<< HEAD
+=======
+import Guide from "./pages/Guide"; // 추가된 부분
+>>>>>>> c740b3e (jieun_merge)
 
 const App = () => {
     const [name, setName] = useState("");
@@ -57,6 +61,10 @@ const App = () => {
                 <Route path="/animation4" element={<Animation4 />} />
                 <Route path="/nextButtonScreen" element={<NextButtonScreen setScreen={navigate} />} />
                 <Route path="/result" element={<ResultScreen resetGame={resetGame} />} />
+<<<<<<< HEAD
+=======
+                <Route path="/guide" element={<Guide />} /> {/* 추가된 부분 */}
+>>>>>>> c740b3e (jieun_merge)
             </Routes>
         </div>
     );
