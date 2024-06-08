@@ -10,7 +10,7 @@ const Change = (props) => {
             navigate('/Ending1');
             return;
         }
-        const nextChapterId = parseInt(chapterId) + 1;
+        const nextChapterId = parseInt(chapterId.match(/\d+/)[0], 10) + 1;
         setChapter(nextChapterId);
         navigate(`/chapter/${nextChapterId}`);
     };
