@@ -1,0 +1,64 @@
+.background {
+    width: 1000px;
+    height: 650px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff; /* 배경색을 설정 */
+}
+
+.blurImage {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    filter: blur(10px);
+    z-index: 1; /* 배경 블러를 가장 아래에 위치시킴 */
+    cursor: pointer; /* 클릭 가능한 영역임을 나타냄 */
+}
+
+.faces {
+    position: relative;
+    z-index: 2; /* 배경 블러 위에 위치시킴 */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    top: 30px;
+}
+
+.face {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 20px;
+    z-index: 2; /* 배경 블러 위에 위치시킴 */
+}
+
+.face img {
+    width: 100px;
+    height: 100px;
+    margin-right: -25px;
+    z-index: 2;
+}
+
+.gauge {
+    width: 800px;
+    height: 20px;
+    background-color: #ccc; /* 빈 게이지 부분 */
+    position: relative;
+    border-radius: 30px;
+}
+
+.fill {
+    height: 100%;
+    background-color: #f7941d; /* 채워진 게이지 부분 */
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 30px;
+}
