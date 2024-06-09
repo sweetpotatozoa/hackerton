@@ -2,7 +2,7 @@ import styles from './Choice.module.css';
 import { useParams, useNavigate } from 'react-router-dom';
 
 const Choice = (props) => {
-    const { chapter, setChapter, gameContent, gameData, setGameData } = props;
+    const { gameContent, gameData, setGameData } = props;
     const { chapterId } = useParams();
     const navigate = useNavigate();
     const nextHandler = (e) => {
@@ -26,8 +26,8 @@ const Choice = (props) => {
             const newAffinity = {
                 ...gameData.affinity,
                 character1: gameData.affinity.character1 + 5,
-                character1: gameData.affinity.character2 + 10,
-                character1: gameData.affinity.character3 - 20,
+                character2: gameData.affinity.character2 + 10,
+                character3: gameData.affinity.character3 - 20,
                 character4: gameData.affinity.character4 + 20,
             };
 

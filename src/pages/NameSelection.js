@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import backgroundImage from '../assets/images/image.png';
 import './NameSelection.css';
 import { useNavigate } from 'react-router-dom';

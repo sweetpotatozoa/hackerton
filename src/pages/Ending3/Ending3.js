@@ -1,8 +1,7 @@
-import React, { useEffect, useState } from 'react';
 import styles from './Ending3.module.css';
-import { useParams, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
-function Ending3({ gameData, setGameData }) {
+function Ending3({ gameData }) {
     const navigate = useNavigate();
     console.log('gameData', gameData);
 

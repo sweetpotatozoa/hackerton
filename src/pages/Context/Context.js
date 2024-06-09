@@ -2,7 +2,7 @@ import styles from './Context.module.css';
 import { useParams, useNavigate } from 'react-router-dom';
 
 const Context = (props) => {
-    const { chapter, setChapter, gameContent } = props;
+    const { gameContent } = props;
     const { chapterId } = useParams();
     const navigate = useNavigate();
     const nextHandler = () => {

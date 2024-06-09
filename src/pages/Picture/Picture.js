@@ -2,7 +2,7 @@ import styles from './Picture.module.css';
 import { useParams, useNavigate } from 'react-router-dom';
 
 const Picture = (props) => {
-    const { chapter, setChapter, gameContent } = props;
+    const { gameContent } = props;
     const { chapterId } = useParams();
     const navigate = useNavigate();
 

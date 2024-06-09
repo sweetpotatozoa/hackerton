@@ -3,7 +3,7 @@ import styles from './Change.module.css';
 import { useParams, useNavigate } from 'react-router-dom';
 
 const Change = (props) => {
-    const { chapter, setChapter, gameContent, gameData } = props;
+    const { setChapter, gameContent } = props;
     const { chapterId } = useParams();
     const navigate = useNavigate();
 

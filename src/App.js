@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Routes, Route, useNavigate } from 'react-router-dom';
 import InitialScreen from './pages/InitialScreen';
 import NameSelection from './pages/NameSelection';
@@ -212,8 +212,6 @@ const gameContent = {
 };
 
 const App = () => {
-    const [name, setName] = useState('');
-    const [gender, setGender] = useState('');
     const [scores, setScores] = useState({ A: 0, B: 0, C: 0, D: 0 });
     const [chapter, setChapter] = useState(1);
 
@@ -224,20 +222,9 @@ const App = () => {
         new Audio('/audios/princess_maker.m4a').play();
     };
 
-    const selectName = (enteredName) => {
-        setName(enteredName);
-        navigate('/genderSelection');
-    };
-
     const selectGender = (selectedGender) => {
         setGender(selectedGender);
         new Audio(`/audios/${selectedGender}_letsgo.m4a`).play();
-    };
-
-    const endGame = () => {
-        const highestScore = Math.max(...Object.values(scores));
-        const matchedPerson = Object.keys(scores).find((person) => scores[person] === highestScore);
-        navigate('/result', { state: { matchedPerson } });
     };
 
     const resetGame = () => {

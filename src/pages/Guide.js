@@ -1,9 +1,9 @@
-import React from "react";
-import "./Guide.css";
-import { ReactComponent as NextLogo } from "../assets/images/NextLogo.svg";
-import { ReactComponent as Male_group } from "../assets/images/Male_group.svg";
-import { ReactComponent as Female_group } from "../assets/images/Female_group.svg";
-import { Link } from "react-router-dom";
+import React from 'react';
+import './Guide.css';
+import { ReactComponent as NextLogo } from '../assets/images/NextLogo.svg';
+import { ReactComponent as Male_group } from '../assets/images/Male_group.svg';
+import { ReactComponent as Female_group } from '../assets/images/Female_group.svg';
+import { Link } from 'react-router-dom';
 
 function Guide() {
     return (
@@ -16,10 +16,10 @@ function Guide() {
             </div>
             <div className="middleSection">
                 <div className="leftImage">
-                    <Male_group />
+                    <MaleGroup />
                 </div>
                 <div className="rightImage">
-                    <Female_group />
+                    <FemaleGroup />
                 </div>
             </div>
             <div className="bottomSection">

@@ -2,7 +2,7 @@ import styles from './Chapter.module.css';
 import { useParams, useNavigate } from 'react-router-dom';
 
 const Chapter = (props) => {
-    const { chapter, setChapter, gameContent } = props;
+    const { chapter, gameContent } = props;
     const { chapterId } = useParams();
 
     const navigate = useNavigate();
