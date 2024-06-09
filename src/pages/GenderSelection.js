@@ -25,13 +25,13 @@ const GenderSelection = ({ gameData, setGameData, selectGender }) => {
             selectGender(selectedGender);
             navigate('/animation1');
         } else {
-            alert('성별을 선택하세요.');
+            alert('나의 성별을 선택하세요.');
         }
     };
 
     return (
         <div className="gender-selection">
-            <h1>성별을 선택하세요.</h1>
+            <h1>나의 성별을 선택하세요.</h1>
             <div className="gender-buttons">
                 <button
                     className={`gender-button ${selectedGender === 'female' ? 'selected' : ''}`}
