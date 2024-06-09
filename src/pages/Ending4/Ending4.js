@@ -70,7 +70,7 @@ function Ending4({ gameData, setGameData }) {
     return (
         <div className={styles.container}>
             <img className={styles.logo} src="/img/NextLogo.svg" alt="NextLogo" />
-            <img className={styles.background} src="/img/school.svg" alt="school" />
+            <img className={styles.background} src="/img/box.svg" alt="school" />
             <img className={styles.leftImage} src={chracterImg} alt="player" />
             <div className={styles.imoji}>💌</div>
 

@@ -244,6 +244,7 @@ const App = () => {
         setScores({ A: 0, B: 0, C: 0, D: 0 });
         navigate('/');
         localStorage.clear();
+        setChapter(null);
     };
 
     const initialUserState = {

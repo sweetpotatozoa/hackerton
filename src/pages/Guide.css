@@ -23,25 +23,30 @@
     margin-left: 20px;
 }
 
+.logoImage {
+    width: 100px;
+    height: auto;
+}
+
 .title {
     font-size: 30px;
     font-weight: bold;
-    margin-right: 20px;
+    margin-right: 60px;
 }
 
-.leftImage {
-    justify-content: center;
-    align-items: center;
-    width: 100px;
-    height: auto;
-    margin-top: 20%;
+.middleSection {
+    height: 300px;
+    display: flex;
 }
+
+.leftImage,
 .rightImage {
+    flex: 1;
+    display: flex;
     justify-content: center;
     align-items: center;
     width: 100px;
     height: auto;
-    padding: 10px;
 }
 
 .bottomSection {
