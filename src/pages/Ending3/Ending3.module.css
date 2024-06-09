@@ -13,40 +13,11 @@
     font-size: 35px;
     font-weight: lighter;
     color: white;
-    top: 80px; /* 원하는 위치로 설정 */
-    left: 350px; /* 원하는 위치로 설정 */
+    top: 100px;
+    left: 50%; /* 화면의 가로 중앙 */
+    transform: translate(-50%, -50%);
     z-index: 2; /* 배경 이미지는 제일 아래로 */
     position: absolute; /* 절대 위치 지정 */
-}
-
-.text2 {
-    font-size: 14px;
-    position: absolute; /* 절대 위치 지정 */
-    font-family: sans-serif;
-    color: black;
-    top: 325px; /* 원하는 위치로 설정 */
-    right: 485px; /* 원하는 위치로 설정 */
-    z-index: 2; /* 배경 이미지는 제일 아래로 */
-}
-
-.text3 {
-    font-size: 18px;
-    position: absolute; /* 절대 위치 지정 */
-    font-family: sans-serif;
-    color: black;
-    top: 430px; /* 원하는 위치로 설정 */
-    left: 330px; /* 원하는 위치로 설정 */
-    z-index: 2; /* 배경 이미지는 제일 아래로 */
-}
-
-.text4 {
-    font-size: 18px;
-    position: absolute; /* 절대 위치 지정 */
-    font-family: sans-serif;
-    color: black;
-    bottom: 138px; /* 원하는 위치로 설정 */
-    left: 328px; /* 원하는 위치로 설정 */
-    z-index: 2; /* 배경 이미지는 제일 아래로 */
 }
 
 .img {

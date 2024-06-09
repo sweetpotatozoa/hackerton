@@ -1,11 +1,8 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import styles from './Ending4.module.css';
 import { useNavigate } from 'react-router-dom';
 
 function Ending4({ gameData, setGameData }) {
-    const [final, setFinal] = useState('');
-    const [playerName, setPlayerName] = useState('');
-    const [playerImage, setPlayerImage] = useState('');
     const navigate = useNavigate();
     console.log('gameData', gameData);
 
@@ -17,7 +14,6 @@ function Ending4({ gameData, setGameData }) {
     };
 
     console.log('gameData', gameData.name);
-
     const findTopCharacter = (affinity) => {
         return Object.keys(affinity).reduce((topCharacter, character) => {
             return affinity[character] > affinity[topCharacter] ? character : topCharacter;
@@ -26,11 +22,11 @@ function Ending4({ gameData, setGameData }) {
 
     const topCharacter = findTopCharacter(gameData.affinity);
     const topCharacterName = () => {
-        if (gameData.gender === 'male') {
+        if (gameData.gender === 'female') {
             if (topCharacter === 'character1') {
                 return '김상우';
             } else if (topCharacter === 'character2') {
-                return '김상현';
+                return '이상현';
             } else if (topCharacter === 'character3') {
                 return '김도원';
             } else if (topCharacter === 'character4') {
@@ -52,7 +48,7 @@ function Ending4({ gameData, setGameData }) {
     const topCharacterImage = (characterName) => {
         if (characterName === '김상우') {
             return '/images/face1.png';
-        } else if (characterName === '김상현') {
+        } else if (characterName === '이상현') {
             return '/images/face2.png';
         } else if (characterName === '김도원') {
             return '/images/face3.png';
@@ -75,13 +71,13 @@ function Ending4({ gameData, setGameData }) {
         <div className={styles.container}>
             <img className={styles.logo} src="/img/NextLogo.svg" alt="NextLogo" />
             <img className={styles.background} src="/img/school.svg" alt="school" />
-            <div className={styles.middleSection}>
-                <img className={styles.leftImage} src={chracterImg} alt="player" />
-                <div className={styles.righttext}>
-                    {gameData.name}님에게 가장 높은 호감도를
-                    <br />
-                    보인 {topCharacterName()}이(가) 데이트 신청을 했습니다.
-                </div>
+            <img className={styles.leftImage} src={chracterImg} alt="player" />
+            <div className={styles.imoji}>💌</div>
+
+            <div className={styles.righttext}>
+                {gameData.name}님에게 가장 높은 호감도를
+                <br />
+                보인 {topCharacterName()}이(가) 데이트 신청을 했습니다.
             </div>
             <button className={styles.returnButton} onClick={handleReplayClick}>
                 Replay

@@ -1,18 +1,17 @@
 /* Ending4.module.css */
-
 .container {
     width: 1000px;
     height: 650px;
     margin: 0 auto;
-    display: flex;
-    flex-direction: column;
+
     background-color: black;
     color: white;
 }
 
 .logo {
     height: 120px;
-    top: 350px;
+    top: 50px;
+    text-shadow: 5px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -29,18 +28,6 @@
     z-index: 0;
 }
 
-.middleSection {
-    height: 700px;
-    display: flex;
-    padding: 80px;
-    font-size: 20px;
-    font-family: 'DNFForgedBlade-Bold', sans-serif;
-    z-index: 2; /* 배경 이미지는 제일 아래로 */
-    position: absolute; /* 절대 위치 지정 */
-    top: 500px;
-    left: 700px;
-}
-
 .leftImage {
     display: flex;
     justify-content: center;
@@ -48,22 +35,34 @@
     width: 200px;
     height: auto;
     position: absolute; /* 절대 위치 지정 */
-    left: 80px;
+    margin-left: 10%;
+    margin-top: 20%;
     z-index: 2; /* 배경 이미지는 제일 아래로 */
 }
-
+.imoji {
+    position: absolute; /* 절대 위치 지정 */
+    z-index: 2; /* 배경 이미지는 제일 아래로 */
+    width: 1000px;
+    left: 300px;
+    margin-left: 20%;
+    margin-top: 17%;
+    font-size: 100px;
+}
 .righttext {
     position: absolute; /* 절대 위치 지정 */
     z-index: 2; /* 배경 이미지는 제일 아래로 */
     width: 1000px;
     left: 300px;
+    margin-left: 20%;
+    margin-top: 25%;
+    font-size: 30px;
 }
 
 .returnButton {
     background-color: rgb(255, 174, 43);
     border: none;
     padding: 10px 20px;
-    font-size: 60px;
+    font-size: 30px;
     text-decoration: none;
     border-radius: 10px;
     color: black;
@@ -71,6 +70,10 @@
     font-family: 'DNFForgedBlade-Bold', sans-serif;
     z-index: 2; /* 배경 이미지는 제일 아래로 */
     position: absolute; /* 절대 위치 지정 */
-    left: 960px;
-    top: 700px;
+    left: 950px;
+    top: 550px;
+}
+
+.title {
+    margin-right: 60px;
 }

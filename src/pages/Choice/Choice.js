@@ -25,7 +25,7 @@ const Choice = (props) => {
             // 예시: character1의 affinity 증가
             const newAffinity = {
                 ...gameData.affinity,
-                character1: gameData.affinity.character1 + 10,
+                character1: gameData.affinity.character1 + 5,
                 character1: gameData.affinity.character2 + 10,
                 character1: gameData.affinity.character3 - 20,
                 character4: gameData.affinity.character4 + 20,
@@ -55,7 +55,7 @@ const Choice = (props) => {
             // 예시: character1의 affinity 증가
             const newAffinity = {
                 ...gameData.affinity,
-                character1: gameData.affinity.character1 + 10,
+                character1: gameData.affinity.character1 + 5,
                 character2: gameData.affinity.character2 + 10,
                 character3: gameData.affinity.character3 - 20,
                 character4: gameData.affinity.character4 - 20,
@@ -72,10 +72,10 @@ const Choice = (props) => {
             // 예시: character1의 affinity 증가
             const newAffinity = {
                 ...gameData.affinity,
-                character1: gameData.affinity.character1 - 20,
+                character1: gameData.affinity.character1 - 10,
                 character2: gameData.affinity.character2 - 20,
                 character3: gameData.affinity.character3 + 10,
-                character4: gameData.affinity.character4 + 30,
+                character4: gameData.affinity.character4 + 20,
             };
 
             // gameData 업데이트
@@ -88,10 +88,10 @@ const Choice = (props) => {
             // 예시: character1의 affinity 증가
             const newAffinity = {
                 ...gameData.affinity,
-                character1: gameData.affinity.character1 + 20,
+                character1: gameData.affinity.character1 + 10,
                 character2: gameData.affinity.character2 + 20,
                 character3: gameData.affinity.character3 - 10,
-                character4: gameData.affinity.character4 - 30,
+                character4: gameData.affinity.character4 - 20,
             };
 
             // gameData 업데이트
@@ -121,7 +121,7 @@ const Choice = (props) => {
             // 예시: character1의 affinity 증가
             const newAffinity = {
                 ...gameData.affinity,
-                character1: gameData.affinity.character2 + 20,
+                character1: gameData.affinity.character2 + 10,
                 character4: gameData.affinity.character4 - 10,
             };
 
@@ -136,8 +136,8 @@ const Choice = (props) => {
             // 예시: character1의 affinity 증가
             const newAffinity = {
                 ...gameData.affinity,
-                character1: gameData.affinity.character1 + 20,
-                character2: gameData.affinity.character2 + 10,
+                character1: gameData.affinity.character1 + 10,
+                character2: gameData.affinity.character2 + 5,
                 character4: gameData.affinity.character4 - 10,
             };
 
@@ -152,7 +152,7 @@ const Choice = (props) => {
             // 예시: character1의 affinity 증가
             const newAffinity = {
                 ...gameData.affinity,
-                character2: gameData.affinity.character2 + 10,
+                character2: gameData.affinity.character2 + 5,
                 character4: gameData.affinity.character4 - 10,
             };
 
@@ -168,7 +168,7 @@ const Choice = (props) => {
             const newAffinity = {
                 ...gameData.affinity,
                 character1: gameData.affinity.character1 + 10,
-                character3: gameData.affinity.character3 - 20,
+                character3: gameData.affinity.character3 - 15,
             };
 
             // gameData 업데이트
@@ -197,8 +197,8 @@ const Choice = (props) => {
             // 예시: character1의 affinity 증가
             const newAffinity = {
                 ...gameData.affinity,
-                character1: gameData.affinity.character1 + 30,
-                character2: gameData.affinity.character2 - 20,
+                character1: gameData.affinity.character1 + 20,
+                character2: gameData.affinity.character2 - 10,
                 character3: gameData.affinity.character3 + 10,
                 character4: gameData.affinity.character4 + 10,
             };
@@ -250,7 +250,7 @@ const Choice = (props) => {
                 character1: gameData.affinity.character1 + 10,
                 character2: gameData.affinity.character2 + 20,
                 character3: gameData.affinity.character3 - 10,
-                character4: gameData.affinity.character4 - 30,
+                character4: gameData.affinity.character4 - 20,
             };
 
             // gameData 업데이트
